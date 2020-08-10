@@ -1,0 +1,13 @@
+<div>
+  <h2>
+    <%= @article.title %>
+    <%= link_to "✏️", edit_article_path(@article)%>
+
+    <%= link_to "🗑", article_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </h2>
+  <p><%= @article.content %></p>
+
+  <hr>
+  <%= link_to "Back", articles_path %>
+</div>
+
